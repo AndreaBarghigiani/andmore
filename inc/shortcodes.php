@@ -9,14 +9,14 @@
 * 1. Toasts
 */
 
-function am_toasts( $attr, $content=null ){
+function am_tooltip( $attr, $content=null ){
 
   //Extract Attributes
   extract(
     shortcode_atts(
       array(
         'text' => 'Test',
-        'time' => 2000
+        'position' => 'bottom'
       ),
       $attr
     )
@@ -24,10 +24,10 @@ function am_toasts( $attr, $content=null ){
 
   //Check Content
   if( $content ){
-    $ele = "<a class='btn' onclick='toast(\'$text\', $time)'>$content</a>";
+    $ele = '<a class="btn tooltipped" data-position="' . $position . '" data-tooltip="' . $text . '">' . $content . '</a>';
   }
 
   return $ele;
 }
 
-add_shortcode( 'toasts', 'am_toasts' );
+add_shortcode( 'tooltip', 'am_tooltip' );
