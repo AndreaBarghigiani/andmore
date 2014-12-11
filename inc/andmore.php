@@ -47,6 +47,7 @@ add_action( 'wp_enqueue_scripts', 'add_js_materialize' );
 
 function add_js_materialize(){
  wp_enqueue_script( 'materializejs', get_template_directory_uri() . '/materialize/js/bin/materialize.js', array('jquery'), '0.0.2', true );
+ wp_enqueue_script( 'amcode', get_template_directory_uri() . '/js/amcode.js', array('jquery'), '0.0.2', true );
 }
 
 // 3. Carico CSS Materialize

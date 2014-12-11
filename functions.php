@@ -142,3 +142,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load AndMore config file
  */
 require get_template_directory() . '/inc/andmore.php';
+
+/**
+* Load AndMore shortcodes file
+*/
+require get_template_directory() . '/inc/shortcodes.php';

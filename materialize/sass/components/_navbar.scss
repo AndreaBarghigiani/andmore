@@ -32,7 +32,7 @@ nav {
     display: inline-block;
     font-size: 2.1rem;
     padding: 0;
-    
+
     @media #{$medium-and-down} {
 //      position: absolute;
 //      right: 0;
@@ -51,7 +51,7 @@ nav {
     margin: 0;
     float: right;
 
-    li { 
+    li {
       float: left;
       padding: 0px;
       @include transition(background-color .3s);
@@ -60,9 +60,9 @@ nav {
         background-color: color("materialize-red", "lighten-1");
       }
     }
-    a { 
+    a {
       font-size: 1rem;
-      color: #fff; 
+      color: #fff;
       display: block;
       padding: 0px 15px;
     }
@@ -78,6 +78,6 @@ nav {
     line-height: 64px;
   }
   nav .nav-wrapper i {
-    font-size: 2rem;    
+    font-size: 2rem;
   }
 }

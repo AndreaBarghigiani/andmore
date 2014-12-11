@@ -6,20 +6,20 @@ a {
 
 
 html{
-    line-height: 1.5;  
-  
+    line-height: 1.5;
+
     @media only screen and (min-width: 0) {
+        font-size: 13px;
+    }
+
+    @media only screen and (min-width: $medium-screen) {
+        font-size: 13.5px;
+    }
+
+    @media only screen and (min-width: $large-screen) {
         font-size: 14px;
     }
-    
-    @media only screen and (min-width: $medium-screen) {
-        font-size: 14.5px;
-    }
-    
-    @media only screen and (min-width: $large-screen) {
-        font-size: 15px;
-    }
-    
+
     font-family: "Roboto", sans-serif;
     font-weight: normal;
     color: $off-black;
@@ -27,7 +27,7 @@ html{
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 }
-		
+
 // Header Styles
 $h1-fontsize: 4.2rem;
 $h2-fontsize: 3.56rem;
@@ -55,7 +55,7 @@ small { font-size: 75%; }
   $interval-size: $range / $intervals;
   $i: 0;
   font-weight: 300;
-  
+
   	@while $i <= $intervals {
       		@media only screen and (min-width : 360 + ($i * $interval-size)) {
       		font-size: 1.2rem * (1 + (.02 * $i));
