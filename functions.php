@@ -79,9 +79,9 @@ endif; // andmore_setup
 add_action( 'after_setup_theme', 'andmore_setup' );
 
 // This theme uses wp_nav_menu() in one location.
-add_action( 'after_setup_theme', 'register_my_menu' );
+add_action( 'init', 'register_my_menu' );
 function register_my_menu() {
-	register_nav_menu( 'primary', 'Primary Menu' );
+	register_nav_menu( 'secondary', 'Secondo Tentativo' );
 }
 /**
  * Register widget area.

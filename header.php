@@ -29,12 +29,19 @@
 
 
 		<nav>
+			
 			<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'primary',
-					)
+				$logo = '<a class="brand-logo" href="' . esc_url( get_home_url( '/' ) ) .'" rel="home">' . get_bloginfo( 'name' ) . '</a>';
+				$menu = array( 
+					'theme_location' => 'secondary',
+					'container' => 'div',
+					'container_class' => '',
+					'menu_class' => 'right side-nav',
+					'menu_id' => 'nav-mobile',
+					'items_wrap' => '<div class="nav-wrapper">' . $logo . '<ul id="%1$s" class="%2$s">%3$s</ul></div>',
+					'walker' => new materialize_menu()
 				);
+				wp_nav_menu( $menu );
 			?>
 		</nav>
 	</header><!-- #masthead -->
